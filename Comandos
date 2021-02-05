@@ -1,0 +1,28 @@
+Intentar romper un wordpress
+wpscan --url (ip)/wordpress -P Descargas/kaonashi14M.txt -U admin
+
+Comprobar puertos abiertos además de una explicación extensa de protocolos vulnerables
+nmap -sV (ip que queramos)
+nmap -sV --reason -PN -n --top-ports 100 owasp.org
+
+Hacer ping a una dirección
+ping (ip que queramos)
+
+
+Si añadimos a una dirección robots.txt obtendremos el documento
+https://owasp.org/robots.txt
+
+
+Para obtener en profundidad la estructura de una página web escribiremos
+nc.traditional -n -vv (ip que queramos) 80
+
+Para ver los dominios que tienen una web
+host -t NS medo-owasp.org
+
+Certificados de una web
+nmap --script ssl-cert,ssl-enum-ciphers -p 443,465,993,995 owasp.org
+
+Más datos de una web
+curl -kis http://owasp.org/restricted/
+
+
